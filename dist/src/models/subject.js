@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const nanoid_1 = require("nanoid");
 const mongoose_1 = require("mongoose");
-var { nanoid } = require("nanoid");
 const Source = new mongoose_1.Schema({
     source_id: {
         type: String,
         required: true,
-        default: () => nanoid(9),
+        default: () => (0, nanoid_1.nanoid)(9),
         unique: true,
     },
     teacher_id: String,
@@ -19,7 +19,7 @@ const ContentSchema = new mongoose_1.Schema({
     content_id: {
         type: String,
         required: true,
-        default: () => nanoid(9),
+        default: () => (0, nanoid_1.nanoid)(9),
         unique: true,
     },
     name: { type: String, required: true },
@@ -29,7 +29,7 @@ const SubjectUnit = new mongoose_1.Schema({
     unit_id: {
         type: String,
         required: true,
-        default: () => nanoid(9),
+        default: () => (0, nanoid_1.nanoid)(9),
         unique: true,
     },
     name: { type: String, required: true },
@@ -40,7 +40,7 @@ const SubjectSchema = new mongoose_1.Schema({
     nano_id: {
         type: String,
         required: true,
-        default: () => nanoid(9),
+        default: () => (0, nanoid_1.nanoid)(9),
         unique: true,
     },
     name: { type: String, required: true },

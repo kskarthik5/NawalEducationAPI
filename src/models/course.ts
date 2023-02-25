@@ -1,5 +1,5 @@
+import { nanoid } from "nanoid";
 import {model,Schema} from "mongoose";
-var { nanoid } = require("nanoid");
 const CourseSchema = new Schema({
     nano_id:{
         type: String,
